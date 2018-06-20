@@ -1,0 +1,92 @@
+settings 
+skewness 1/20
+Triangular1
+step_size = 10000
+epochs 10, base_lr 0.002, max_lr 0.03, batch_size 32
+
+test 1
+The Scored loss is 0.0357258, accuracy0.98729804
+AUC: 0.9943 PRECISION 0.45008 RECALL 0.960481 F1SCORE 0.612938
+
+test2 
+The Scored loss is 0.0243986, accuracy0.99071
+AUC: 0.995097 PRECISION 0.531398 RECALL 0.95962 F1SCORE 0.6840
+
+test 3:
+The Scored loss is 0.038465, accuracy0.987091
+AUC: 0.9950 PRECISION 0.4458649 RECALL 0.958762 F1SCORE 0.608671
+
+----------------------------------------------
+settings skewness 1/20
+exp_range
+step_size = 4000
+epochs 12, base_lr 0.002, max_lr 0.03, batch_size 32, epochs_per_step 2
+
+test 1
+The Scored loss is 0.018886, accuracy0.993190
+AUC: 0.99519 PRECISION 0.618382 RECALL 0.9132302 F1SCORE 0.73742
+
+test2
+The Scored loss is 0.018293, accuracy0.99307
+AUC: 0.9957625 PRECISION 0.60694 RECALL 0.96048 F1SCORE 0.74384
+
+test3
+The Scored loss is 0.0288073, accuracy0.989196
+AUC: 0.99461 PRECISION 0.49179 RECALL 0.9527 F1SCORE 0.64872
+
+
+---------------------------------------------
+---------------------------------------------------------------------------------------  skewness = 1/36
+---------------------------------------------
+
+settings 
+skewness 1/36
+Triangular1
+
+step_size = 8000
+epochs 12, base_lr 0.002, max_lr 0.03, batch_size 32, epochs_per_step 2
+Total positive patches for training are:  3459
+Total negative patches for training are:  304225
+-----------------------------------------------------------
+Positive patches for training are:  3459
+Negative patches for training are:  124541
+
+test1
+The Scored loss is 0.0043, accuracy 0.9987
+AUC: 0.9974 PRECISION:  0.9249 RECALL: 0.9527 F1SCORE: 0.9386 
+
+test2
+The Scored loss is 0.0048, accuracy 0.9986
+AUC: 0.9964 PRECISION:  0.9157 RECALL: 0.9519 F1SCORE: 0.9334 
+
+test3
+
+The Scored loss is 0.0042, accuracy 0.9987
+AUC: 0.9970 PRECISION:  0.9289 RECALL: 0.9536 F1SCORE: 0.9411 
+
+
+----------------------------------------------
+settings 
+skewness 1/36
+EXP_RANGE [AUC: 0.9974 PRECISION:  0.9552 RECALL: 0.9191 F1SCORE: 0.9368] 
+
+test1 : 
+The Scored loss is 0.0056, accuracy 0.9982
+AUC: 0.9965 PRECISION:  0.8894 RECALL: 0.9467 F1SCORE: 0.9172 
+
+
+
+test2 : 
+The Scored loss is 0.0059, accuracy 0.9981
+AUC: 0.9978 PRECISION:  0.8718 RECALL: 0.9579 F1SCORE: 0.9128 
+
+
+test3 :
+The Scored loss is 0.0063, accuracy 0.9980
+AUC: 0.9970 PRECISION:  0.8659 RECALL: 0.9596 F1SCORE: 0.9104 
+
+
+
+
+
+
