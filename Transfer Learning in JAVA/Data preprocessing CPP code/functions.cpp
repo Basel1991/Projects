@@ -116,9 +116,7 @@ void aia::project0::movingWindow (std::string imagesPath, std::string masksPath,
 	}
 }
 
-/* THIS FUNCTION TAKES TWO VECTORS OF FILES NAMES,i.e. GROUND TRUTH AND IMAGES NAMES, RETURNS A VECTOR OF TWO ELEMENTS
-(as the function name suggests !!!)THE FIRST ELEMENT IS THE VECTOR OF NEGATIVE (NO GROUND TRUTH) FILES NAMES,
-THE SECOND IS A VECTOR OF POSITIVE FILES NAMES( HAVE GROUND TRUTH)*/
+
 std::vector<std::vector<std::string>> aia::project0::splitNegPos(const std::vector<std::string> &images, const std::vector<std::string> &groundTruth)
 {
 	std::vector<std::string> posFiles;
@@ -149,14 +147,7 @@ std::vector<std::vector<std::string>> aia::project0::splitNegPos(const std::vect
 	return dataBase;
 }
 
-/*This function takes a database folder and a destination folder, it takes a parameterized maximum number
-		of samples from images with matched names (till the end of the pattern)
-		and save them into the destination folder.
-		ARGUMENTS:
-		srcFolderPath: the source folder absolute path
-		dstFolderPath: destination folder absolute path
-		pattern: used for the mechanism of detecting similar images that share the same name till the end of the Pattern
-		samplesNum: the maximum allowed number of samples beloning to the same image*/
+
 void aia::project0::reduceDataBase(std::string srcFolderPath, std::string dstFolderPath, std::string pattern, int samplesNum)
 {
 	std::vector<std::vector<std::string>> reducedDataBase;
