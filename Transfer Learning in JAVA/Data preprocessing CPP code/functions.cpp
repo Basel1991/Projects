@@ -2,53 +2,6 @@
 #include "functions.h"
 #include <math.h>
 
-cv::Mat aia::project0::faceRectangles(const cv::Mat & frame) throw (aia::error)
-{
-	// find faces
-	std::vector < cv::Rect > faces = aia::faceDetector(frame);
-
-	// for each face found...
-	cv::Mat out = frame.clone();
-	for(int k=0; k<faces.size(); k++)
-		cv::rectangle(out, faces[k], cv::Scalar(0, 0, 255), 2);
-
-	return out;
-}
-cv::Mat aia::project0::enhanceEdges(const cv::Mat & img)
-{
-	cv::Mat dstImg,dx,dy;
-	cv::Sobel(img, dx, CV_32F, 1,0);
-	 cv::Sobel(img, dy, CV_32F, 0,1);
-	 cv::magnitude(dx,dy,dstImg);
-	return dstImg;
-
-}
-cv::Mat matching(cv::Mat  image, cv::Mat  reference){
-	
-	if(image.size() != reference.size() || image.channels() != reference.channels())
-		throw aia::error("unmatched image and referencce sizes and/or channels number");
-		
-	cv::Mat result = cv::Mat::zeros(image.rows, image.cols, CV_8U);
-	aia::imshow("image ", image);
-	aia::imshow("reference", reference);
-
-	for(int i =0; i<image.rows; i++)
-	{
-		aia::uint8 * imageRow = image.ptr<aia::uint8>(i);
-		aia::uint8 * refRow = reference.ptr<aia::uint8>(i);
-		aia::uint8 * resRow = result.ptr<aia::uint8>(i);
-		for(int j=0; j< image.cols; j++)
-		{
-			std::cout<<imageRow[j] <<"  "<< refRow[j]<<"\n";
-			if(imageRow[j]  && refRow[j])
-				resRow[j] = 1;
-		}
-
-	}
-	return result;
-}
-
-
 void aia::project0::movingWindow (std::string imagesPath, std::string masksPath, std::string groundTruthPath, int negStride,
 			int posStride, std::string testPosImgFolderPath, std::string testNegImgFolderPath, std::string trainPosImgFolderPath, std::string trainNegImgFolderPath, float trainTestRatio)
 {
@@ -95,8 +48,8 @@ void aia::project0::movingWindow (std::string imagesPath, std::string masksPath,
 		}
 		for(int j=0; j<2; j++)
 		{
-			stride = j ? posStride : negStride;  //take the negative stride when negative imaged and 
-			//the positive when positive 
+			stride = j ? posStride : negStride;  //take the negative stride when negative imaged and
+			//the positive when positive
 			for(int i=0; i<negPosImagesNames[j].size(); i++)
 			{
 				negImageCount=0;
@@ -110,14 +63,14 @@ void aia::project0::movingWindow (std::string imagesPath, std::string masksPath,
 
 				lastBackSlash = negPosImagesNames[j][i].find("\\"); //for some reason glob replaces the last "/" by '\\'
 				maskAbsPath = masksPath + "/"+ imageName.substr(lastBackSlash+1) + ".mask.png" ;
-				maskImg = cv::imread(maskAbsPath, CV_LOAD_IMAGE_UNCHANGED); 
+				maskImg = cv::imread(maskAbsPath, CV_LOAD_IMAGE_UNCHANGED);
 
 				std::cout<<i<<" "<<imageName.substr(lastBackSlash+1)<<"\n";
 				for(int y=10; y< image.rows - 454 ; y+= stride)  //scan image rows
 				{
 					for(int x=10; x < image.cols - 454; x+=stride)  //scan image columns
 					{
-							
+
 						if(cv::countNonZero(maskImg(cv::Rect(x,y,454,454))) == 0) // window outside the breast
 						{
 							x+= 454 - stride;	//make a big step, do not worry about -stride, +stride is coming next iteration :)
@@ -142,7 +95,7 @@ void aia::project0::movingWindow (std::string imagesPath, std::string masksPath,
 											std::cout<<"count negative " <<i<<"\t"<<negCounter<<"\n";
 										}
 									}
-								if(cv::countNonZero(windowCenter) == windowCenter.rows * windowCenter.cols ) //center all white ==> mass centered 
+								if(cv::countNonZero(windowCenter) == windowCenter.rows * windowCenter.cols ) //center all white ==> mass centered
 									{
 										cv::imwrite(posImgFolderPath + writeFileName +"_"+ std::to_string(i)+"_p_" +std::to_string(++posCounter)+ ".tif", window);
 										std::cout<<"count positive " <<i<<"\t"<<posCounter<<"\n";
@@ -153,25 +106,25 @@ void aia::project0::movingWindow (std::string imagesPath, std::string masksPath,
 								cv::imwrite(negImgFolderPath+ writeFileName + "_"+ std::to_string(i)+ "_n_"+std::to_string(++negCounter)+ ".tif", window);
 										std::cout<<"count negative " <<i<<"\t"<<negCounter<<"\n";
 							}
-						
+
 
 						}
 					}
-				}	
+				}
 			}
 		}
 	}
 }
 
 /* THIS FUNCTION TAKES TWO VECTORS OF FILES NAMES,i.e. GROUND TRUTH AND IMAGES NAMES, RETURNS A VECTOR OF TWO ELEMENTS
-(as the function name suggests !!!)THE FIRST ELEMENT IS THE VECTOR OF NEGATIVE (NO GROUND TRUTH) FILES NAMES, 
+(as the function name suggests !!!)THE FIRST ELEMENT IS THE VECTOR OF NEGATIVE (NO GROUND TRUTH) FILES NAMES,
 THE SECOND IS A VECTOR OF POSITIVE FILES NAMES( HAVE GROUND TRUTH)*/
 std::vector<std::vector<std::string>> aia::project0::splitNegPos(const std::vector<std::string> &images, const std::vector<std::string> &groundTruth)
 {
 	std::vector<std::string> posFiles;
 	std::vector<std::string> negFiles;
 	std::vector<std::vector<std::string>> dataBase;
-	std::string pureName;	//the name of the image 
+	std::string pureName;	//the name of the image
 	bool posImage= false;
 	for(int i=0; i< images.size(); i++)
 	{
@@ -179,25 +132,25 @@ std::vector<std::vector<std::string>> aia::project0::splitNegPos(const std::vect
 		posImage= false;	//reset
 		for(int j=0; j<groundTruth.size() ; j++)
 		{
-			
+
 			if(groundTruth[j].find(pureName) != std::string::npos )
 			{
 					posFiles.push_back(images[i]);
 					posImage = true;
 			}
-			
+
 		}
 		if(!posImage)
 			negFiles.push_back(images[i]);
-		
+
 	}
 	dataBase.push_back(negFiles);
 	dataBase.push_back(posFiles);
 	return dataBase;
 }
 
-/*This function takes a database folder and a destination folder, it takes a parameterized maximum number 
-		of samples from images with matched names (till the end of the pattern) 
+/*This function takes a database folder and a destination folder, it takes a parameterized maximum number
+		of samples from images with matched names (till the end of the pattern)
 		and save them into the destination folder.
 		ARGUMENTS:
 		srcFolderPath: the source folder absolute path
@@ -209,7 +162,7 @@ void aia::project0::reduceDataBase(std::string srcFolderPath, std::string dstFol
 	std::vector<std::vector<std::string>> reducedDataBase;
 	std::vector<std::string> srcNames, dstNames, selectedNames;
 	float samplesCounter=0;
-	
+
 	cv::glob(srcFolderPath, srcNames);
 	bool * checked = new bool [srcNames.size()];
 	for(int i=0; i< srcNames.size(); i++)
@@ -220,7 +173,7 @@ void aia::project0::reduceDataBase(std::string srcFolderPath, std::string dstFol
 	{
 		if(checked[i])
 			continue;
-		
+
 		imageName = srcNames[i].substr(0,srcNames[i].find_first_of(pattern));
 		for(int j=0; j<srcNames.size() ; j++)
 		{
@@ -228,7 +181,7 @@ void aia::project0::reduceDataBase(std::string srcFolderPath, std::string dstFol
 			{
 				dstNames.push_back(srcNames[j]);
 				checked[j] =true;
-				
+
 			}
 		}
 		if(dstNames.size() > samplesNum)
@@ -238,11 +191,11 @@ void aia::project0::reduceDataBase(std::string srcFolderPath, std::string dstFol
 				{
 					selectedNames.push_back(dstNames[ceil((samplesCounter/samplesNum)* dstNames.size())]);
 					samplesCounter++;
-					
+
 				}
 				reducedDataBase.push_back(selectedNames);
 				selectedNames.clear();
-				
+
 			}
 			else
 				reducedDataBase.push_back(dstNames);
@@ -256,8 +209,8 @@ void aia::project0::reduceDataBase(std::string srcFolderPath, std::string dstFol
 			cv::imread(reducedDataBase[i][j], CV_LOAD_IMAGE_UNCHANGED));
 
 			std::cout<<" saving image i= "<< i<<"\t window j= " << j <<"\n";
-			
+
 		}
-		
+
 
 }
