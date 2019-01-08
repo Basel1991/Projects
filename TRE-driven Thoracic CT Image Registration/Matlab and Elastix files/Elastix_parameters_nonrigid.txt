@@ -1,0 +1,119 @@
+// Components
+
+(Registration						"MultiResolutionRegistration")
+
+(Metric								"AdvancedMattesMutualInformation")
+
+(ImageSampler 						"RandomCoordinate")// Full
+
+(Interpolator 						"LinearInterpolator")
+
+(ResampleInterpolator 				"FinalBSplineInterpolator")
+	
+(Resampler 							"DefaultResampler")
+	
+(Transform 							"BSplineTransform")//	Recursive proved not equivalent to normal BSpline
+	
+(Optimizer 							"AdaptiveStochasticGradientDescent")
+
+
+
+// ********* Pyramids
+
+(NumberOfResolutions 				6)
+
+(FixedImagePyramid 					"FixedSmoothingImagePyramid")
+	
+(MovingImagePyramid					"MovingSmoothingImagePyramid")
+
+(ImagePyramidSchedule 				 14 14 3  10 10 2  8 8 2  4 4 1  2 2 1  1 1 1) //lesser smoothing on z axis due to lower resolution
+
+//(ImagePyramidSchedule 				14 14 3  10 10 3  8 8 2  4 4 2  2 2 1  1 1 1) 
+
+//(ImagePyramidSchedule 			12 12 5  10 10 4  8 8 3  4 4 2  2 2 1  1 1 1)
+
+
+
+// ********* Transform
+
+(AutomaticScalesEstimation 			"true")		// let elasticx determine parameters ranges
+
+(HowToCombineTransforms 			"Compose")
+
+(AutomaticTransformInitialization 	"true")
+
+(FinalGridSpacingInVoxels 			8.0 8.0 4.0) // lesser grid spacing on z axis due to lower resolution
+
+//(GridSpacingSchedule        		20.0  16.0  8.0  4.0  2.0  1.0)
+
+
+
+// ********* Optimizer
+
+(AutomaticParameterEstimation 		"true") // let Elastix determine proper parameters values 
+
+(UseAdaptiveStepSizes 				"true")
+
+(ASGDParameterEstimationMethod 		"DisplacementDistribution") // adaptive and fast computation of step size for optimizer
+
+//(MaximumNumberOfIterations 		600) 
+
+(SP_A								50.0) //learning-rate-related variable
+
+
+
+// ********* Interpolator
+
+(FinalBSplineInterpolationOrder 	3)
+
+//(BSplineInterpolationOrder			3) did not work well with all images
+
+
+
+// ********* Data types and formats
+
+(FixedInternalImagePixelType 		"float")
+
+(MovingInternalImagePixelType 		"float")
+
+(ResultImageFormat 					"nii.gz")
+
+(ResultImagePixelType				"float")
+
+
+
+// ********* Image Sampler
+
+(MaximumNumberOfSamplingAttempts 	20)
+
+(NumberOfSpatialSamples 			25000)
+
+(NewSamplesEveryIteration 			"true")
+
+(UseRandomSampleRegion 				"true")
+
+(SampleRegionSize 					150.0 150.0 35.0) // sample voxels from a cube of neighbours (~1/4 of each dimension).
+
+
+
+//********** Metric
+
+(NumberOfHistogramBins						64)
+
+
+
+// ********* Extra
+
+//(RequiredRatioOfValidSamples 		0.05)	//accept insufficient overlap earlier
+
+//(Scales 							10000.0)
+
+//(SP a 1000.0)  // not needed with ASGD optimizer
+
+// in case you get too many samples outside the map
+// 		(AutomaticTransformInitialization "true")
+// 		(AutomaticTransformInitializationMethod "GeometricalCenter")
+
+// if too much memory consumption
+//		(FixedInternalImagePixelType "short")
+//		(MovingInternalImagePixelType "short")

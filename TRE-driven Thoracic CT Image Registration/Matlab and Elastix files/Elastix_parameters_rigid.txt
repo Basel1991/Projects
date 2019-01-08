@@ -1,0 +1,109 @@
+// Components
+
+(Registration						"MultiResolutionRegistration")
+
+(Metric								"AdvancedNormalizedCorrelation")
+
+(ImageSampler 						"RandomCoordinate")
+
+(Interpolator 						"LinearInterpolator")
+
+(ResampleInterpolator 				"FinalBSplineInterpolator")
+		
+(Resampler 							"DefaultResampler")
+	
+(Transform 							"AffineTransform")
+	
+(Optimizer 							"AdaptiveStochasticGradientDescent")
+
+
+
+// ********* Pyramids
+
+(NumberOfResolutions 				6)
+
+(FixedImagePyramid 					"FixedSmoothingImagePyramid")
+
+(MovingImagePyramid					"MovingSmoothingImagePyramid")
+
+(ImagePyramidSchedule 				14 14 3  10 10 2  8 8 2  4 4 1  2 2 1  1 1 1) //lesser smoothing on z axis due to lower resolution
+
+//(ImagePyramidSchedule 				14 14 3  10 10 3  8 8 2  4 4 2  2 2 1  1 1 1)
+
+//(ImagePyramidSchedule 			12 12 5 10 10 4 8 8 3 4 4 2 2 2 1 1 1 1)
+
+
+
+// ********* Transform
+
+(AutomaticScalesEstimation 			"true")		// let elasticx determine parameters ranges
+
+(HowToCombineTransforms 			"Compose")
+
+(AutomaticTransformInitialization 	"true")
+
+
+
+// ********* Optimizer
+
+(AutomaticParameterEstimation 		"true")
+
+(UseAdaptiveStepSizes 				"true")
+
+(ASGDParameterEstimationMethod 		"DisplacementDistribution") // adaptive and fast computation of step size for optimizer
+
+//(MaximumNumberOfIterations 			600)
+
+(SP_A								50.0)
+
+
+
+// ********* Interpolator
+
+(FinalBSplineInterpolationOrder 	3)
+
+
+
+
+// ********* Data types and formats
+
+(FixedInternalImagePixelType 		"float")
+
+(MovingInternalImagePixelType 		"float")
+
+(ResultImageFormat 					"nii.gz")
+
+(ResultImagePixelType 				"float")
+
+(WriteResultImage					"false")
+
+
+
+// ********* Image Sampler
+
+(MaximumNumberOfSamplingAttempts 	20) // useful when it is hard to find enough overlapping from the first round
+
+(NumberOfSpatialSamples 			7500)
+
+(UseRandomSampleRegion 				"true")
+
+(SampleRegionSize 					150.0 150.0 35.0) // sample voxels from a cube of neighbours (~1/4 of each dimension).
+
+(NewSamplesEveryIteration 			"true")
+
+
+
+// ********* Extra
+
+//(RequiredRatioOfValidSamples 		0.05)	//accept insufficient overlap earlier
+
+//(Scales 							10000.0)
+
+
+//(SP a 1000.0)  // not needed with ASGD optimizer
+// in case you get too many samples outside the map
+// 		(AutomaticTransformInitialization "true")
+// 		(AutomaticTransformInitializationMethod "GeometricalCenter")
+// if too much memory consumption
+//		(FixedInternalImagePixelType "short")
+//		(MovingInternalImagePixelType "short")
