@@ -28,7 +28,7 @@ In this figure we evaluate the performance of using the DCGAN as an augmentation
 ![f1score_allfolds](https://user-images.githubusercontent.com/23275312/59156842-5a8c7400-8aa2-11e9-9432-33dcd9d2b2ad.png)
 
 
-#### t-SNE Analysis
+#### t-Stochastic Neighbors Embedding (t-SNE) Analysis
 
 In this section we compare the distribution of the generated images and the real ones. We show that the synthetic images support the real ones by filling the gaps in the distribution which justifies previous results where DCGAN helped to increase the generalisation of the classsifier.
 
