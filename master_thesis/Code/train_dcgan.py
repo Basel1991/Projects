@@ -5,8 +5,6 @@ year: 2019
 
 This script is used to train the DCGAN.
 """
-
-
 from __future__ import print_function
 # %matplotlib inline
 import os

@@ -1,7 +1,7 @@
 """
 author: Basel Alyafi
 year: 2019
-Erasmus Mundus in MEdical Imaging and Applications 2017-2019
+Erasmus Mundus in Medical Imaging and Applications 2017-2019
 Master Thesis
 """
 import argparse
@@ -28,12 +28,10 @@ warnings.filterwarnings(action='ignore')
 
 def extract_roi(gt_folder, dcm_folder, end_with, roi_folder): #DOC OK
     """
-
     this function is used to extract region of interest given a gray-scale image and a binary groundtruth.
 
     Params:
     -------
-
     gt_folder: string
         the real_path to the ground truth images (binary images with a white rectangle over the region of interest
     dcm_folder: string

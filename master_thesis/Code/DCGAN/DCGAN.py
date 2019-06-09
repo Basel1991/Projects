@@ -8,7 +8,6 @@ from __future__ import print_function
 
 import torch.nn as nn
 
-
 # custom weights initialization called on netG and netD
 
 def weights_init(m):
@@ -22,7 +21,6 @@ def weights_init(m):
 ######################################################################
 # Generator
 # ~~~~~~~~~
-
 
 class Generator(nn.Module):
     def __init__(self, ngpu, nz, ngf, nc):
@@ -68,9 +66,6 @@ class Generator(nn.Module):
 
     # a path that can be used for saving the model
     Gpath = '/home/basel/PycharmProjects/DCGAN/models/Generators/'
-
-######################################################################
-
 
 ######################################################################
 # Discriminator

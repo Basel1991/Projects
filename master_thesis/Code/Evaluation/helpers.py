@@ -647,8 +647,7 @@ def save_dataset(dataset, indices, dst_path): #DOC OK
 
     for file_path in imgs_names[indices]:
         shutil.copy(np.squeeze(file_path)[0].astype(str), dst_path)
-
-
+        
 
 def plot_confusion_matrix(y_true, y_pred, classes,
                               normalize=False,
