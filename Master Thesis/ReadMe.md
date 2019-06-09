@@ -5,7 +5,8 @@ This is where I put code + utilities related to my Master's thesis in Erasmus Mu
 ## Generative Adversarial Networks (GANs) for Realistic Data Augmentation and Lesion Simulation in X-ray Breast Imaging.
 I this work DCGAN was used to generate mammographic patches (128 X 128 pixels).
 
-1. DCGAN Training 
+1. DCGAN Training.
+
 The following Figure shows the process of training the DCGAN.
 
 ![GAN](https://user-images.githubusercontent.com/23275312/59156752-b950ee00-8aa0-11e9-9b3a-03c83ea8387a.png)
