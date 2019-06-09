@@ -1,0 +1,5 @@
+pytorch             version 1.0.1.post2
+scikit-learn        version 0.20.2
+matplotlib          version 3.0.2
+skimage             version 0.14.2
+numpy               version 1.16.1
