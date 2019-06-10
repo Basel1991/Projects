@@ -1,14 +1,19 @@
+"""
+Author: Basl Alyafi
+Master Thesis Project
+Erasmus Mundus Joint Master in Medical Imaging and Applications
+"""
 #How to Run
 #Here We include an example of how to create a new instance, load pretrained weights and generate any number of mammographic lesinos.
 from Gans.DCGAN import Generator
 from helpers import run_generator
 
 # the name of the generator
-model_name = 'baseG_10.01_28_05_2019_last'
+model_name = 'mass_calcification_gen'
 n_imgs = 100
 # the path where to save_model the images
-imgs_path = '/home/basel/Datasets/OPTIMAM/MassMalSample/fake2/'
-src_path = '/home/basel/Datasets/OPTIMAM/MassMal/1Mal/'
+imgs_path = '.../dst'
+src_path = '.../'
 
 # create an instance of the generator
 model = Generator(ngpu=1, nz=200, ngf=45, nc=1)
