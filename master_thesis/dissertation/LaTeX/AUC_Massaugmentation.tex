@@ -1,0 +1,15 @@
+\begin{table*}[htp]
+    \centering
+        \caption{Area Uner the ROC Curve (AUC) for different modes and training sizes (k), the bold-faced values are the highest.}
+    \begin{tabular}{|*{7}{c|}}
+    \hline
+         \multirow{2}{*}{Mode}   & \multicolumn{6}{|c|}{Training Size}  \\\cline{2-7}
+                                    & 100 & 250 & 500 & 750 & 1000 & 1300 \\\hline
+        ORG                         & 0.9836 & 0.9848 & 0.9896 & 0.999 & 0.9989 & 0.9989 \\\hline
+        GAN                         & 0.9843 & 0.9902 & 0.9984 & 0.9997 & 0.9993 & 0.9987\\\hline
+        Aug ORG                     & 0.9877 & 0.9896 & 0.9982 & \textbf{0.9998} & 0.9997 & 0.9999\\\hline
+        Aug GAN                     & \textbf{0.9902} & \textbf{0.9984} & \textbf{0.9996} & 0.9990 & \textbf{0.9998} & \textbf{0.9999}\\\hline
+    \end{tabular}
+
+    \label{tab:auc_mass_aug}
+\end{table*}

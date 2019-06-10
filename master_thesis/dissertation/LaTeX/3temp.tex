@@ -1,0 +1,23 @@
+\documentclass[final,3p,twocolumn,authoryear,sort&compress,times]{maia}
+%\documentclass[final,1p,authoryear,sort&compress,times]{maia}
+\journal{MAIA Master}
+
+
+%% PACKAGES %%%%%%%%%%%%
+% Add as packages as necessary
+\usepackage{amsmath,amssymb}	
+\usepackage{graphicx}
+\usepackage{hhline}	
+\usepackage{color}
+\usepackage{natbib}
+\usepackage{hyperref}
+
+\begin{document}
+\begin{figure}[h]
+    \centering{
+    % \includegraphics{\input{figures/bicycle.pdf}}
+    \def\svgwidth{\linewidth}
+    \input{figures/GAN_img.pdf_tex}}
+    \caption{\citet{bicycle} used Bicycle GAN, input image of a scene in the evening (top left), a winter version on top right as a ground truth, in the bottom two images in a clear summer day (left) and autumn evening (right).  }
+\end{figure}
+\end{document}
