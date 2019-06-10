@@ -43,6 +43,6 @@ Our great gratitude goes to Nvidia for supporting this work by a Titan X GPU. I 
 
 ![MAIA](https://user-images.githubusercontent.com/23275312/59156972-ddfa9500-8aa3-11e9-8891-560f0ce716a1.jpg)
 
-MAIA (Joint Master Degree in MedicAl Imaging and Applications) master is a 2 years’ joint master degree (120 ECTS) coordinated by the University of Girona (UdG, Spain) and with the University of Bourgogne (uB, France) and the Università degli studi di Cassino e del Lazio Meridionale (UNICLAM, Italy) as partners.
+MAIA (Joint Master Degree in MedicAl Imaging and Applications) master is a 2-year joint master degree (120 ECTS) coordinated by the University of Girona (UdG, Spain) and with the University of Bourgogne (uB, France) and the Università degli studi di Cassino e del Lazio Meridionale (UNICLAM, Italy) as partners.
 
 https://maiamaster.udg.edu/
