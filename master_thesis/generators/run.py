@@ -1,5 +1,5 @@
 """
-Author: Basl Alyafi
+Author: Basel Alyafi
 Master Thesis Project
 Erasmus Mundus Joint Master in Medical Imaging and Applications
 """
