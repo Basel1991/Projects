@@ -40,4 +40,6 @@ In this section we compare the distribution of the generated images and the real
 
 Our great gratitude goes to Nvidia for supporting this work by a Titan X GPU. I would like also to thank my supervisors for offering decent infrastructure and dataset as well as directing me to the target. I am in huge debt to Vicorob research institute, especially Mostafa Abubakr Salem (PhD) for his fruitful discussions and valuable suggestions regarding DCGAN training and testing. Special thanks go to Lavsen Dahal (MAIA) and Albert Garcia (PhD) for their continuous support and enlightening insights.
 
+MAIA (Joint Master Degree in MedicAl Imaging and Applications) master is a 2 years’ joint master degree (120 ECTS) coordinated by the University of Girona (UdG, Spain) and with the University of Bourgogne (uB, France) and the Università degli studi di Cassino e del Lazio Meridionale (UNICLAM, Italy) as partners. 
+https://maiamaster.udg.edu/
 ![MAIA](https://user-images.githubusercontent.com/23275312/59156972-ddfa9500-8aa3-11e9-8891-560f0ce716a1.jpg)
