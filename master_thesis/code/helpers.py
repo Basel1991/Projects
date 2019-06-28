@@ -296,7 +296,7 @@ def run_generator(model, batch_size, save_path, RGB): #DOC OK
             img = np.stack([img,img,img], axis=-1)
 
         #save the image
-        io.imsave(save_path + '{}.pdf'.format(i), img)
+        io.imsave(save_path + '{}.png'.format(i), img)
     print('Finished Generating Images')
 
 def apply_dropout(layer):#DOC OK
