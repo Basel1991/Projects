@@ -1,4 +1,4 @@
-![thesis_readme](https://user-images.githubusercontent.com/23275312/59156695-de912c80-8a9f-11e9-8c54-c02afaf69d08.png)
+![Github_thesis_header](https://user-images.githubusercontent.com/23275312/62536193-a6169080-b84d-11e9-8f14-525747a2e341.png)
 
 # Master Thesis
 This is where I put code + utilities related to my Master's thesis in Erasmus Mundus in Medical Imaging and Applications.
