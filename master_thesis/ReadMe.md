@@ -24,14 +24,14 @@ This process is repeated until all real images are used to complete one epoch.
 
 
 ### Results
-
+#### Qualitatively
 In this section we show two batches, one real and one fake to be able to compare the quality of the generated images.
 
 ![real_fake_2](https://user-images.githubusercontent.com/23275312/59156914-367d6280-8aa3-11e9-98c9-7ce785905fcb.png)
 
 
 
-### Evaluation
+### Quantitatively
 
 #### Trained Generators for Augmenting Unbalanced Classification Problems
 In this figure we evaluate the performance of using the DCGAN as an augmentation tool as a function of the trinaing size.
