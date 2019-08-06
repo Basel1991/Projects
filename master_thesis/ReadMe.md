@@ -36,10 +36,10 @@ In this section we show two batches, one real and one fake to be able to compare
 #### Trained Generators for Augmenting Unbalanced Classification Problems
 In this figure we evaluate the performance of using the DCGAN as an augmentation tool as a function of the trinaing size.
 The four augmentation approaches investigated (see the figure below) are:
-    + *ORG*: using original images, the input for the classifier is Pk as positive images plus Nk as negative.
-    + *Aug ORG*: original images were augmented using random horizontal and vertical flipping.
-    + *GAN*: the training set of the classifier is k real masses and 1.5 X k synthetic masses as the positive class, and 10 X k normal tissue patches as the negative class.
-    + *Aug GAN*: the 1.5 X k generated images as well as the real ones were augmented on the fly by random horizontal and vertical flipping. 
+ + *ORG*: using original images, the input for the classifier is Pk as positive images plus Nk as negative.
+ + *Aug ORG*: original images were augmented using random horizontal and vertical flipping.
+ + *GAN*: the training set of the classifier is k real masses and 1.5 X k synthetic masses as the positive class, and 10 X k normal  tissue patches as the negative class.
+ + *Aug GAN*: the 1.5 X k generated images as well as the real ones were augmented on the fly by random horizontal and vertical flipping. 
    
 Because the dataset is imbalanced, F1 score was used as an evaluation metric. This provides equal importance to precision and recall. As observed in Fig. \ref{fig:methodology}, the test and validation sets were fixed for all k's. 3-fold cross validation was used to assure reliable results.
 
