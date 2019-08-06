@@ -41,7 +41,7 @@ The four augmentation approaches investigated (see the figure below) are:
  + *GAN*: the training set of the classifier is k real masses and 1.5 X k synthetic masses as the positive class, and 10 X k normal  tissue patches as the negative class.
  + *Aug GAN*: the 1.5 X k generated images as well as the real ones were augmented on the fly by random horizontal and vertical flipping. 
    
-Because the dataset is imbalanced, F1 score was used as an evaluation metric. This provides equal importance to precision and recall. As observed in Fig. \ref{fig:methodology}, the test and validation sets were fixed for all k's. 3-fold cross validation was used to assure reliable results.
+Because the dataset is imbalanced, F1 score was used as an evaluation metric. This provides equal importance to precision and recall. The test and validation sets were fixed for all k's. 3-fold cross validation was used to assure reliable results.
 
 ![f1score_allfolds](https://user-images.githubusercontent.com/23275312/59156842-5a8c7400-8aa2-11e9-9432-33dcd9d2b2ad.png)
 
