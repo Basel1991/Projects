@@ -2,7 +2,7 @@
 
 # Master's Thesis
 This is where I put a short overview of my Master's thesis in Erasmus Mundus in Medical Imaging and Applications.
-_Supervisors: _Dr Robert Marti and Dr Oliver Diaz_.
+__*Supervisors*__: Dr Robert Marti and Dr Oliver Diaz.
 ## Generative Adversarial Networks (GANs) for Realistic Data Augmentation and Lesion Simulation in X-ray Breast Imaging.
 In this work, DCGAN [1] was used to generate mammographic patches (128 X 128 pixels) that have comparable realism and diversity to real ones measured by Frechet Inception Distance [2].
 
