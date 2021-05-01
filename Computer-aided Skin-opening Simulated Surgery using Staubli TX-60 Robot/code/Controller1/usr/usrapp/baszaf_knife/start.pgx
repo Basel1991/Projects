@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<programList xmlns="ProgramNameSpace">
+  <program name="start" public="false">
+    <description />
+    <paramSection />
+    <localSection />
+    <source>
+      <code>begin
+  userPage()
+  cls()
+  // Starting the trajectory
+  putln("program starter")
+  enablePower()
+  // speed is 15 percent
+  mNomSpeed.vel=15
+  // the trajectory has nine points in addition to two initial points
+  // move to the initial point
+  //open(flange)
+  movej(point1[0],flange,mNomSpeed)
+  putln("initial point reached")
+  // move to second supporting point
+  movej(point10[0],flange,mNomSpeed)
+  putln("Supporting point reached")
+  // speed is 5 percent
+  mNomSpeed.vel=5
+  // moving to point2
+  movej(point2[0],flange,mNomSpeed)
+  putln("point2 reached")
+  // speed is 1 percent
+  mNomSpeed.vel=1
+  // moving to point3
+  movej(point3[0],flange,mNomSpeed)
+  putln("point3 reached")
+  // moving to point4
+  movej(point4[0],flange,mNomSpeed)
+  putln("point4 reached")
+  // moving to point5
+  movej(point5[0],flange,mNomSpeed)
+  putln("point5 reached")
+  // moving to point6
+  movej(point6[0],flange,mNomSpeed)
+  putln("point6 reached")
+  // moving to point7
+  movel(point7[0],flange,mNomSpeed)
+  putln("point7 reached")
+  // moving to point8
+  movel(point8[0],flange,mNomSpeed)
+  putln("point8 reached")
+  // moving to point9
+  movel(point9[0],flange,mNomSpeed)
+  putln("point9 reached")
+  // speed is 5 percent
+  mNomSpeed.vel=5
+  // moving back to second initial point
+  movej(point10[0],flange,mNomSpeed)
+  putln("Supporting point reached")
+  // speed is 15 percent
+  mNomSpeed.vel=15
+  // moving back to initial point
+  movej(point1[0],flange,mNomSpeed)
+  putln("initial point  reached")
+  close(flange)
+end
+
+      </code>
+    </source>
+  </program>
+</programList>

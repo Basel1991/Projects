@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<options>
+  <Bool name="buildSerial2" value="False" />
+  <Bool name="buildSerial1" value="False" />
+  <String name="cioBoardConfig" value="" />
+  <Bool name="buildCio" value="False" />
+  <Bool name="buildBio" value="True" />
+  <Bool name="buildBio2" value="True" />
+  <Bool name="buildMio" value="True" />
+  <String name="testMode" value="Demo" />
+</options>

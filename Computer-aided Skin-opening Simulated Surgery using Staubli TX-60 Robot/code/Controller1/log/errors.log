@@ -1,0 +1,121 @@
+﻿[01/03/19 11:24:20]: -----------------------------------------------
+[01/03/19 11:24:20]: Logger started
+[01/03/19 11:24:24]: CPU board: TEKNOR ?Mhz; ?Mb RAM; ?Mb disk; bios: ?; fpga: ?; ataIde: ?
+[01/03/19 11:24:24]: Cycle time set to 0.004s
+[01/03/19 11:24:24]: Simulation cycle time set to 0.1s
+[01/03/19 11:24:24]: Controller IP address could not be updated
+[01/03/19 11:24:24]: STARC : No STARC board detected on PCI.
+[01/03/19 11:24:24]: Power shutdown delay set to 0 s
+[01/03/19 11:24:24]: Power hour count = 0:00:00
+[01/03/19 11:24:24]: Mac Address = 0a-00-27-00-00-14
+[01/03/19 11:24:24]: COM-PC: server created on all interfaces [5653]
+[01/03/19 11:24:24]: VAL3: s6.8 Feb  9 2010
+[01/03/19 11:24:24]: Option testMode: demo 
+[01/03/19 11:24:24]: Configuration Version: D24266415A 
+[01/03/19 11:24:24]: Machine Number: ? 
+[01/03/19 11:24:24]: Arm: tx60-S1-R3 floor
+[01/03/19 11:24:24]: Arm serial number: ? 
+[01/03/19 11:24:24]: EP: s6.8 Feb  3 2010
+[01/03/19 11:24:24]: SCA: s6.8 Feb  3 2010
+[01/03/19 11:24:24]: PLC: s6.8 Feb  3 2010
+[01/03/19 11:24:24]: New profile : default
+[01/03/19 11:24:25]: COM-PC: create session 127.0.0.1 on port 49953 id=#55320904
+[01/03/19 11:24:25]: Unknown event:No answer
+[01/03/19 11:24:25]: End of arm power shutdown phase.
+[01/03/19 11:24:32]: MCP communication disconnected
+[01/03/19 11:24:33]: Mcp = TSimulated
+[01/03/19 11:24:33]: Unknown event:Communication established
+[01/03/19 11:24:33]: Working mode:manual.
+[01/03/19 11:30:01]: Working mode:test.
+[01/03/19 11:30:04]: Saving controller context...
+[01/03/19 11:30:04]: Controller temperature: 28°C
+[01/03/19 11:30:04]: CPU temperature: 28°C
+[01/03/19 11:30:09]: baszaf_knife application started
+[01/03/19 11:30:09]: Unknown event:Enable or disable request refused because the controller is not in the good working mode
+[01/03/19 11:31:57]: -----------------------------------------------
+[01/03/19 11:31:57]: Logger started
+[01/03/19 11:32:01]: CPU board: TEKNOR ?Mhz; ?Mb RAM; ?Mb disk; bios: ?; fpga: ?; ataIde: ?
+[01/03/19 11:32:01]: Cycle time set to 0.004s
+[01/03/19 11:32:01]: Simulation cycle time set to 0.1s
+[01/03/19 11:32:01]: Controller IP address could not be updated
+[01/03/19 11:32:01]: STARC : No STARC board detected on PCI.
+[01/03/19 11:32:01]: Power shutdown delay set to 0 s
+[01/03/19 11:32:01]: Power hour count = 0:00:00
+[01/03/19 11:32:01]: Mac Address = 0a-00-27-00-00-14
+[01/03/19 11:32:01]: COM-PC: server created on all interfaces [5653]
+[01/03/19 11:32:01]: VAL3: s6.8 Feb  9 2010
+[01/03/19 11:32:01]: Option testMode: demo 
+[01/03/19 11:32:01]: Configuration Version: D24266415A 
+[01/03/19 11:32:01]: Machine Number: ? 
+[01/03/19 11:32:01]: Arm: tx60-S1-R3 floor
+[01/03/19 11:32:01]: Arm serial number: ? 
+[01/03/19 11:32:01]: EP: s6.8 Feb  3 2010
+[01/03/19 11:32:01]: SCA: s6.8 Feb  3 2010
+[01/03/19 11:32:01]: PLC: s6.8 Feb  3 2010
+[01/03/19 11:32:01]: New profile : default
+[01/03/19 11:32:02]: End of arm power shutdown phase.
+[01/03/19 11:32:03]: Unknown event:No answer
+[01/03/19 11:32:10]: MCP communication disconnected
+[01/03/19 11:32:11]: Mcp = TSimulated
+[01/03/19 11:32:11]: Unknown event:Communication established
+[01/03/19 11:32:11]: Working mode:test.
+[01/03/19 11:32:18]: COM-PC: create session 127.0.0.1 on port 50042 id=#54206792
+[01/03/19 11:32:37]: baszaf_knife application started
+[01/03/19 11:32:37]: Unknown event:Enable or disable request refused because the controller is not in the good working mode
+[01/03/19 11:34:02]: Jog mode cannot be selected: first enable arm power.
+[01/03/19 11:34:06]: Settling arm power...
+[01/03/19 11:34:06]: Arm power settled.
+[01/03/19 11:34:06]: Unknown event:motion generator activated
+[01/03/19 11:35:43]: baszaf_knife application stopped
+[01/03/19 11:46:48]: Arm power shutdown: working mode change.
+[01/03/19 11:46:48]: Arm power shutdown...
+[01/03/19 11:46:48]: Unknown event:motion generator desactivated
+[01/03/19 11:46:48]: Working mode:remote.
+[01/03/19 11:46:49]: Working mode:automatic.
+[01/03/19 11:46:49]: End of arm power shutdown phase.
+[01/03/19 11:46:50]: Working mode:manual.
+[01/03/19 11:46:53]: Settling arm power...
+[01/03/19 11:46:53]: Arm power settled.
+[01/03/19 11:46:54]: Unknown event:motion generator activated
+[01/03/19 11:46:54]: Saving controller context...
+[01/03/19 11:46:54]: Controller temperature: 28°C
+[01/03/19 11:46:54]: CPU temperature: 28°C
+[01/03/19 11:47:00]: Manual motion mode:Point
+[01/03/19 11:47:00]: Unknown event:motion generator desactivated
+[01/03/19 11:47:00]: Unknown event:motion generator activated
+[01/03/19 12:16:57]: Saving controller context...
+[01/03/19 12:46:59]: Saving controller context... (1)
+[01/03/19 13:04:51]: Arm power shutdown: working mode change.
+[01/03/19 13:04:51]: Arm power shutdown...
+[01/03/19 13:04:51]: Unknown event:motion generator desactivated
+[01/03/19 13:04:52]: Working mode:test.
+[01/03/19 13:04:52]: End of arm power shutdown phase.
+[01/03/19 13:04:54]: Saving controller context...
+[01/03/19 13:04:57]: Settling arm power...
+[01/03/19 13:04:57]: Arm power settled.
+[01/03/19 13:04:58]: Unknown event:motion generator activated
+[01/03/19 13:05:00]: baszaf_knife application started
+[01/03/19 13:05:00]: Unknown event:Enable or disable request refused because the controller is not in the good working mode
+[01/03/19 13:14:05]: Manual motion mode:Joint
+[01/03/19 13:14:08]: Unknown event:Motion reports error while pushing a move.
+[01/03/19 13:14:08]: Unknown event:motion generator desactivated
+[01/03/19 13:14:08]: Unknown event:motion generator activated
+[01/03/19 13:14:08]: Jog move impossible: first select a jog mode.
+[01/03/19 13:14:08]: Jog move impossible: first select a jog mode. (1)
+[01/03/19 13:14:11]: Manual motion mode:Joint
+[01/03/19 13:14:11]: Unknown event:motion generator desactivated
+[01/03/19 13:14:11]: Unknown event:motion generator activated
+[01/03/19 13:14:26]: baszaf_knife application stopped
+[01/03/19 13:14:31]: baszaf_knife application started
+[01/03/19 13:14:31]: Unknown event:Enable or disable request refused because the controller is not in the good working mode
+[01/03/19 13:14:44]: Manual motion mode:Disabled
+[01/03/19 13:14:44]: Unknown event:motion generator desactivated
+[01/03/19 13:14:44]: Unknown event:motion generator activated
+[01/03/19 13:16:43]: baszaf_knife application stopped
+[01/03/19 13:23:15]: baszaf_knife application started
+[01/03/19 13:23:15]: Unknown event:Enable or disable request refused because the controller is not in the good working mode
+[01/03/19 13:25:15]: baszaf_knife application stopped
+[01/03/19 13:26:13]: baszaf_knife application started
+[01/03/19 13:26:13]: Unknown event:Enable or disable request refused because the controller is not in the good working mode
+[01/03/19 13:27:09]: baszaf_knife application stopped
+[01/03/19 13:34:59]: Saving controller context...
